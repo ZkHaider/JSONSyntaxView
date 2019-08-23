@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+if ! command -v carthage > /dev/null; then 
+    printf 'Carthage not installed.'
+    exit 1
+fi 
+
+carthage update --use-submodules --no-use-binaries --no-build --new-resolver
