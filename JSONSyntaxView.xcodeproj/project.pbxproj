@@ -27,6 +27,8 @@
 		C4BF3898230F6CC900C09B1B /* JSON.Syntax.View.iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF3897230F6CC900C09B1B /* JSON.Syntax.View.iOS.swift */; };
 		C4BF389A230F7EB600C09B1B /* Content.ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF3899230F7EB600C09B1B /* Content.ViewController.swift */; };
 		C4DF2100230F81D700CA38A0 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF20FF230F81D700CA38A0 /* Application.swift */; };
+		C4DF2103230F986D00CA38A0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C4DF2101230F986D00CA38A0 /* LICENSE */; };
+		C4DF2104230F986D00CA38A0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4DF2102230F986D00CA38A0 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		C4BF3897230F6CC900C09B1B /* JSON.Syntax.View.iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.Syntax.View.iOS.swift; sourceTree = "<group>"; };
 		C4BF3899230F7EB600C09B1B /* Content.ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.ViewController.swift; sourceTree = "<group>"; };
 		C4DF20FF230F81D700CA38A0 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		C4DF2101230F986D00CA38A0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C4DF2102230F986D00CA38A0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		C48CD32F230782DF005EE98C = {
 			isa = PBXGroup;
 			children = (
+				C4DF2101230F986D00CA38A0 /* LICENSE */,
+				C4DF2102230F986D00CA38A0 /* README.md */,
 				C48CD34423078417005EE98C /* Dependencies */,
 				C48CD3862307BF5F005EE98C /* JSONSyntaxExample-Mac */,
 				C48CD33B230782DF005EE98C /* JSONSyntaxView */,
@@ -368,6 +374,8 @@
 			files = (
 				C48CD3922307BF62005EE98C /* Main.storyboard in Resources */,
 				C48CD38F2307BF62005EE98C /* Preview Assets.xcassets in Resources */,
+				C4DF2104230F986D00CA38A0 /* README.md in Resources */,
+				C4DF2103230F986D00CA38A0 /* LICENSE in Resources */,
 				C48CD38C2307BF62005EE98C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
