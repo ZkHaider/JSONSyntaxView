@@ -24,25 +24,20 @@ public final class JSONSyntaxView: NSTextView {
                 keyMatcher: RegexMatcher = KeyMatcher.matcher,
                 valueMatcher: RegexMatcher = ValueMatcher.matcher,
                 endMatcher: RegexMatcher = EndMatcher.matcher,
-                frame frameRect: NSRect) {
+                defaultFrame frameRect: NSRect = .zero,
+                textContainer: NSTextContainer? = nil) {
         self.jsonTokenizer = try! JSONTokenizer(with: config,
                                                 indentMatcher: indentMatcher,
                                                 keyMatcher: keyMatcher,
                                                 valueMatcher: valueMatcher,
                                                 endMatcher: endMatcher)
-        super.init(frame: frameRect)
+        super.init(frame: frameRect, textContainer: textContainer)
         initialize()
     }
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: - Lifecycle
-    
-    public override func layout() {
-        super.layout()
     }
     
 }
@@ -54,7 +49,9 @@ extension JSONSyntaxView {
             
         }
         func prepareViews() {
-            self.delegate = self 
+            self.delegate = self
+            self.wantsLayer = true
+            self.canDrawConcurrently = true
         }
         addSubviews()
         prepareViews()
@@ -66,7 +63,7 @@ extension JSONSyntaxView: NSTextViewDelegate {
     
     // Monitor and update text changes
     public func textDidChange(_ notification: Notification) {
-        
+        print(notification)
     }
     
 }

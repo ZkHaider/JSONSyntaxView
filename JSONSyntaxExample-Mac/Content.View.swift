@@ -14,9 +14,11 @@ final class ContentView: NSView {
     
     // MARK: - Views
     
-    let textView: NSTextView = {
-        let view = NSTextView(frame: .zero)
-        view.isEditable = true
+    let textView: JSONSyntaxView = {
+        let view = JSONSyntaxView(textContainer: NSTextContainer(containerSize: NSSize(width: 589.0,
+                                                                                       height: 385.0)))
+        view.string = "{\n \"counter\": 0 \n}"
+        view.textColor = .white
         return view
     }()
     
@@ -36,11 +38,8 @@ final class ContentView: NSView {
     
     override func layout() {
         super.layout()
-        self.textView.frame = self.bounds.insetBy(dx: 0.0, dy: 20.0)
-    }
-    
-    override func layoutSubtreeIfNeeded() {
-        super.layoutSubtreeIfNeeded()
+        self.textView.frame = self.bounds.insetBy(dx: 0.0,
+                                                  dy: 20.0)
     }
     
 }
@@ -51,8 +50,7 @@ extension ContentView {
             self.addSubview(self.textView)
         }
         func prepareViews() {
-            let tokenizer = try! JSONTokenizer()
-            self.textView.textStorage?.append(tokenizer.highlight(json: "{\n \"counter\": 0 \n}"))
+            
         }
         addSubviews()
         prepareViews()

@@ -13,19 +13,18 @@ import JSONSyntaxView
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var window: NSWindow!
+    lazy var window: NSWindow = {
+        return NSWindow(contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
+                        styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+                        backing: .buffered,
+                        defer: false)
+    }()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
+        let contentViewController = ContentViewController()
         window.center()
-        window.setFrameAutosaveName("Main Window")
-
-        window.contentView = ContentView(frame: .zero)
-
+        window.contentView = contentViewController.view
+        window.contentViewController = contentViewController
         window.makeKeyAndOrderFront(nil)
     }
 

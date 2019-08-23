@@ -25,6 +25,8 @@
 		C4BF3893230F591D00C09B1B /* End.Matcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF3892230F591D00C09B1B /* End.Matcher.swift */; };
 		C4BF3896230F59B300C09B1B /* Tokenizer.Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF3895230F59B300C09B1B /* Tokenizer.Config.swift */; };
 		C4BF3898230F6CC900C09B1B /* JSON.Syntax.View.iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF3897230F6CC900C09B1B /* JSON.Syntax.View.iOS.swift */; };
+		C4BF389A230F7EB600C09B1B /* Content.ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF3899230F7EB600C09B1B /* Content.ViewController.swift */; };
+		C4DF2100230F81D700CA38A0 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF20FF230F81D700CA38A0 /* Application.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		C4BF3892230F591D00C09B1B /* End.Matcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = End.Matcher.swift; sourceTree = "<group>"; };
 		C4BF3895230F59B300C09B1B /* Tokenizer.Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizer.Config.swift; sourceTree = "<group>"; };
 		C4BF3897230F6CC900C09B1B /* JSON.Syntax.View.iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.Syntax.View.iOS.swift; sourceTree = "<group>"; };
+		C4BF3899230F7EB600C09B1B /* Content.ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.ViewController.swift; sourceTree = "<group>"; };
+		C4DF20FF230F81D700CA38A0 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +171,10 @@
 		C48CD3862307BF5F005EE98C /* JSONSyntaxExample-Mac */ = {
 			isa = PBXGroup;
 			children = (
+				C4DF20FF230F81D700CA38A0 /* Application.swift */,
 				C48CD3872307BF5F005EE98C /* AppDelegate.swift */,
 				C4BF3882230F3A3800C09B1B /* Content.View.swift */,
+				C4BF3899230F7EB600C09B1B /* Content.ViewController.swift */,
 				C48CD38B2307BF62005EE98C /* Assets.xcassets */,
 				C48CD3902307BF62005EE98C /* Main.storyboard */,
 				C48CD3932307BF62005EE98C /* Info.plist */,
@@ -398,6 +404,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DF2100230F81D700CA38A0 /* Application.swift in Sources */,
+				C4BF389A230F7EB600C09B1B /* Content.ViewController.swift in Sources */,
 				C48CD3882307BF5F005EE98C /* AppDelegate.swift in Sources */,
 				C4BF3883230F3A3800C09B1B /* Content.View.swift in Sources */,
 			);
@@ -679,7 +687,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zkhaider.JSONSyntaxExample-Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -703,7 +711,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zkhaider.JSONSyntaxExample-Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

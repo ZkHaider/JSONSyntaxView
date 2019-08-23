@@ -24,15 +24,14 @@ public final class JSONSyntaxView: UITextView {
                 keyMatcher: RegexMatcher = KeyMatcher.matcher,
                 valueMatcher: RegexMatcher = ValueMatcher.matcher,
                 endMatcher: RegexMatcher = EndMatcher.matcher,
-                frame: CGRect,
+                defaultframe frame: CGRect = .zero,
                 textContainer: NSTextContainer? = nil) {
         self.jsonTokenizer = try! JSONTokenizer(with: config,
                                                 indentMatcher: indentMatcher,
                                                 keyMatcher: keyMatcher,
                                                 valueMatcher: valueMatcher,
                                                 endMatcher: endMatcher)
-        super.init(frame: frame,
-                   textContainer: textContainer)
+        super.init(frame: frame, textContainer: textContainer)
         initialize()
     }
     
